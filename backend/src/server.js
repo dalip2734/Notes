@@ -6,9 +6,9 @@ import notesRoutes from './routes/notesRoutes.js';
 dotenv.config();
 const app = express();
 
-app.use(express.json());
 connectDB();
-
+// middleware
+app.use(express.json());
 app.use('/api/notes', notesRoutes);
 
 app.listen(5001, () => {
